@@ -4,125 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
-    <style>
-        /* General Reset */
-        body, h1, h2, h3, p, li {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-
-        /* Grid Container */
-        .container {
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: 1fr;
-            height: 100vh;
-        }
-
-        header, footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        main {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .main-content {
-            flex: 2;
-            padding: 20px;
-            background-color: #ffffff;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .main-content > div {
-            background-color: #f0f8ff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            width: calc(33% - 20px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .main-content > div:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .main-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .main-content p {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-
-        .main-content li {
-            list-style-type: disc;
-            margin-left: 20px;
-            text-align: left;
-        }
-
-        .sidebar {
-            flex: 1;
-            background-color: #e3f2fd;
-            padding: 20px;
-        }
-
-        footer {
-            font-size: 14px;
-            color: white;
-        }
-
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-spacing: 10px;
-        }
-
-        th {
-            text-align: center;
-        }
-
-        th img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .main-content > div {
-                width: calc(50% - 20px);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .main-content > div {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <div class="container">
     <header>
         <h1>Personal Profile Web Page</h1>
@@ -130,8 +14,8 @@
     <main>
         <section class="main-content">
             <div>
-                <h2>ABOUT ME</h2>
-                <img src="https://media.discordapp.net/attachments/1303410468060266567/1319556517086625833/IMG_2975.jpg?ex=676cfbc5&is=676baa45&hm=12a01aa75d2f88c965b8031a7c0baa3bb671c0064a1fbf7c33b103ec848f00bf&=&format=webp&width=672&height=897">
+                <h2>About Me</h2>
+                <img src="https://media.discordapp.net/attachments/1303410468060266567/1319556517086625833/IMG_2975.jpg?ex=676cfbc5&is=676baa45&hm=12a01aa75d2f88c965b8031a7c0baa3bb671c0064a1fbf7c33b103ec848f00bf&=&format=webp&width=672&height=897" alt="Profile Image">
                 <p>Name: Ishmael Neal Pablo</p>
                 <p>Nickname: Neal/Pablo</p>
             </div>
@@ -139,7 +23,7 @@
                 <h3>Education/Achievements</h3>
                 <ul>
                     <li>Good Shepherd Christian School - JHS</li>
-                    <li>Good Shephered Christian School - SHS</li>
+                    <li>Good Shepherd Christian School - SHS</li>
                     <li>Asia Pacific College - College (current)</li>
                     <li>Graduated SHS with Honors</li>
                 </ul>
@@ -169,22 +53,22 @@
                 <h3>Picture Gallery</h3>
                 <table>
                     <tr>
-                        <th><img src="https://media.discordapp.net/attachments/1303410468060266567/1319556517820760064/IMG_1385.jpg?ex=676cfbc6&is=676baa46&hm=49b9145b9573fbabcddb4d34e9c12f6137496ac03d9681c4cfa3d07c4905ee4c&=&format=webp&width=672&height=897"></th>
-                        <th><img src="https://media.discordapp.net/attachments/1303410468060266567/1319556518525272126/IMG_5999.jpg?ex=676cfbc6&is=676baa46&hm=fe5e7a4ae9dbe598a9d31f5f538b132e6f0269d208cfe5a3ff24f1a51f5a1328&=&format=webp&width=672&height=897"></th>
-                        <th><img src="https://media.discordapp.net/attachments/1303410468060266567/1319557990256349227/IMG_9278.jpg?ex=676cfd25&is=676baba5&hm=a7ab51189c1e16afe336560947684b37d3356111907e355fdc527d0040284bdd&=&format=webp&width=1593&height=895"></th>
-                        <th><img src="https://media.discordapp.net/attachments/1303410468060266567/1319558442209382420/IMG_3508.jpg?ex=676cfd90&is=676bac10&hm=69ef93a5685708a9f25e363875e817abab88c2b0b744ca16a68b8268e9e7657d&=&format=webp&width=672&height=897"></th>
+                        <th><img src="https://media.discordapp.net/attachments/1303410468060266567/1319556517820760064/IMG_1385.jpg?ex=676cfbc6&is=676baa46&hm=49b9145b9573fbabcddb4d34e9c12f6137496ac03d9681c4cfa3d07c4905ee4c&=&format=webp&width=672&height=897" alt="Gallery Image 1"></th>
+                        <th><img src="https://media.discordapp.net/attachments/1303410468060266567/1319556518525272126/IMG_5999.jpg?ex=676cfbc6&is=676baa46&hm=fe5e7a4ae9dbe598a9d31f5f538b132e6f0269d208cfe5a3ff24f1a51f5a1328&=&format=webp&width=672&height=897" alt="Gallery Image 2"></th>
+                        <th><img src="https://media.discordapp.net/attachments/1303410468060266567/1319557990256349227/IMG_9278.jpg?ex=676cfd25&is=676baba5&hm=a7ab51189c1e16afe336560947684b37d3356111907e355fdc527d0040284bdd&=&format=webp&width=1593&height=895" alt="Gallery Image 3"></th>
+                        <th><img src="https://media.discordapp.net/attachments/1303410468060266567/1319558442209382420/IMG_3508.jpg?ex=676cfd90&is=676bac10&hm=69ef93a5685708a9f25e363875e817abab88c2b0b744ca16a68b8268e9e7657d&=&format=webp&width=672&height=897" alt="Gallery Image 4"></th>
                     </tr>
                 </table>
             </div>
         </section>
         <aside class="sidebar">
-            <!-- Optional Sidebar Content -->
+            <h3>Additional Info</h3>
+            <p>Feel free to explore the site and get to know me better!</p>
         </aside>
     </main>
     <footer>
-        Asia Pacific College
+        Asia Pacific College | All Rights Reserved
     </footer>
 </div>
-
 </body>
 </html>
