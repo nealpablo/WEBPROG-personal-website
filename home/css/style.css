@@ -8,7 +8,7 @@ section{
     padding: 100px;
     display: flex;
     justify-content: end;
-    background: #A9A9A9;
+    background: #ffffff;
     bottom: 280;
 }
  
@@ -18,7 +18,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background:#E51E2A ;
+background:#ffffff ;
 clip-path: circle(50% at right -20%);
 }
  
