@@ -6,71 +6,155 @@
     <title>My Website</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            z-index: 1000;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .modal-content {
+            margin-top: 20px;
+        }
+
+        .modal-close {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .modal-open {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <section>
         <div class="circle"></div>
         <header>
-            <a href="#" class="logo"><img src="logo.jpg" alt="Logo"></a>
             <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="it-experience.html">IT Experience</a></li>
-                <li><a href="goals.html">Goals</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="#" class="open-modal" data-modal="educationModal">Education</a></li>
+                <li><a href="#" class="open-modal" data-modal="goalsModal">Goals</a></li>
+                <li><a href="#" class="open-modal" data-modal="hobbiesModal">Hobbies</a></li>
             </ul>
         </header>
         <div class="content">
             <div class="textBox">
                 <h2>Welcome</h2>
-                <p>I am Neal Pablo</p>
+                <p>Hello, my name is Neal Pablo 20 yrs old and currently taking BSIT-MI at Asia Pacific College</p>
             </div>
             <div class="imagebox">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <!-- Add your slides here -->
-                        <div class="swiper-slide"><img src="slide1.jpg" alt="Slide 1"></div>
-                        <div class="swiper-slide"><img src="slide2.jpg" alt="Slide 2"></div>
-                        <div class="swiper-slide"><img src="slide3.jpg" alt="Slide 3"></div>
+                        <div class="swiper-slide"><img src="img/slide1.jpg" alt="Slide 1"></div>
+                        <div class="swiper-slide"><img src="img/slide2.jpg" alt="Slide 2"></div>
+                        <div class="swiper-slide"><img src="img/slide3.jpg" alt="Slide 3"></div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <section>
-        <div class="circle"></div>
-        <header>
-            <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo"></a>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
-                <li><a href="it-experience.html">IT Experience</a></li>
-                <li><a href="goals.html">Goals</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </header>
-        <div class="content">
-            <h2>Achievements</h2>
-            <p>List of achievements here...</p>
+
+    <div class="modal-overlay"></div>
+
+    <div id="educationModal" class="modal">
+        <div class="modal-header">
+            <h2>Education</h2>
+            <button class="modal-close">&times;</button>
         </div>
-    </section>
+        <div class="modal-content">
+            <p>Where I completed both my elementary and senior high school education. During my senior high school years, I specialized in the STEM (Science, Technology, Engineering, and Mathematics) strand.</p>
+        </div>
+    </div>
+
+    <div id="goalsModal" class="modal">
+        <div class="modal-header">
+            <h2>Goals</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p>My ultimate goal is to achieve financial success and wealth, enabling me to live a comfortable and luxurious life, own many luxury cars and mansions, and become a wise man.</p>
+        </div>
+    </div>
+
+    <div id="hobbiesModal" class="modal">
+        <div class="modal-header">
+            <h2>Hobbies</h2>
+            <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p>In my free time, I enjoy playing competitive video games, casually playing basketball, and coding to enhance my skills and creativity.</p>
+        </div>
+    </div>
+
+    <script src="js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalTriggers = document.querySelectorAll('.open-modal');
+            const modals = document.querySelectorAll('.modal');
+            const overlay = document.querySelector('.modal-overlay');
+            const closeButtons = document.querySelectorAll('.modal-close');
+
+            const openModal = (modalId) => {
+                document.getElementById(modalId).classList.add('modal-open');
+                overlay.classList.add('modal-open');
+            };
+
+            const closeModals = () => {
+                modals.forEach(modal => modal.classList.remove('modal-open'));
+                overlay.classList.remove('modal-open');
+            };
+
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const modalId = trigger.dataset.modal;
+                    openModal(modalId);
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', closeModals);
+            });
+
+            overlay.addEventListener('click', closeModals);
+        });
+    </script>
 </body>
 </html>
