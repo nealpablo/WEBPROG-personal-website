@@ -96,7 +96,7 @@ header .navigation li a{
    display: inline-block;
    margin-top: 20px;
    padding: 8px 20px;
-   background:#E51E2A ;
+   background:#17a0f0 ;
    color: #fff;
    text-decoration: none;
    border-radius:40px;
@@ -133,7 +133,7 @@ align-items: center;
 }
  
 .sci li a:hover{
-   background: #E51E2A;
+   background: #066bee;
    transform: translateY(-10px);
 }
  
